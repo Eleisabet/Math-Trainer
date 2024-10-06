@@ -237,8 +237,12 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wd-mS-o1Q">
                                 <rect key="frame" x="50" y="50" width="62" height="35"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Back"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Back">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="efv-8w-ICO" kind="unwind" unwindAction="unwindActionWithUnwindSegue:" id="Djx-SV-hBv"/>
                                 </connections>
@@ -306,6 +310,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wi4-rV-hTk"/>
+                    <connections>
+                        <outletCollection property="buttonsTwoCollection" destination="fP1-55-uky" collectionClass="NSMutableArray" id="2HZ-cm-dGW"/>
+                        <outletCollection property="buttonsTwoCollection" destination="pXs-30-ncd" collectionClass="NSMutableArray" id="kIj-BF-WfP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRr-yw-Hch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="efv-8w-ICO" userLabel="Exit" sceneMemberID="exit"/>
@@ -314,6 +322,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
