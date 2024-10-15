@@ -16,7 +16,9 @@ final class TrainViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     
     
-  
+    @IBOutlet weak var countLabel: UILabel!
+    
+    
     
     var type: MathTypes = .add {
         didSet {
@@ -32,6 +34,8 @@ final class TrainViewController: UIViewController {
             }
         }
     }
+    
+
     
     // MARK: - Properties
     private var firstNumber = 0
@@ -99,8 +103,19 @@ final class TrainViewController: UIViewController {
         }
         
          private func configureQuestion() {
-             firstNumber = Int.random(in: 1...99)
-             secondNumber = Int.random(in: 1...99)
+
+             
+             switch type {
+                 case .add, .subtract, .multiply:
+                     firstNumber = Int.random(in: 1...99)
+                     secondNumber = Int.random(in: 1...99)
+                     
+                 case .divide:
+                     secondNumber = Int.random(in: 1...10)
+                 let maxResult = 99 / secondNumber
+                 let result = Int.random(in: 1...maxResult)
+                     firstNumber = secondNumber * result
+                 }
             
             let question: String = "\(firstNumber) \(sign) \(secondNumber) ="
             questionLabel.text = question
