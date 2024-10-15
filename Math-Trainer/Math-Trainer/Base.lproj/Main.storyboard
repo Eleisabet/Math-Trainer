@@ -268,6 +268,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7p-YV-JiY"/>
+                                    <action selector="leftAction:" destination="Qai-aL-kuS" eventType="touchUpInside" id="w01-z7-xrY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXs-30-ncd">
@@ -289,6 +290,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lNZ-DI-vGb"/>
+                                    <action selector="rightAction:" destination="Qai-aL-kuS" eventType="touchUpInside" id="j5x-jF-Z3F"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -306,6 +308,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wi4-rV-hTk"/>
+                    <connections>
+                        <outlet property="leftButton" destination="fP1-55-uky" id="nqs-YY-pXj"/>
+                        <outlet property="questionLabel" destination="8oA-lI-oyM" id="jDu-ye-xEg"/>
+                        <outlet property="rightButton" destination="pXs-30-ncd" id="Pc4-V1-Moq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRr-yw-Hch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="efv-8w-ICO" userLabel="Exit" sceneMemberID="exit"/>
